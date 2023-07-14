@@ -24,11 +24,13 @@ function prependCat(name){
 }
 
 function removeLastCat(){
-    let removeCat= cats.slice(0, 2);
+    let removeCat= [...cats]
+    removeCat.pop();
     return removeCat;
 }
 
 function removeFirstCat(){
-    let removeCatTwo=cats.slice(-2);
+    let removeCatTwo=[...cats]
+    removeCatTwo.shift();
     return removeCatTwo;
 }
